@@ -9,7 +9,7 @@ const BUILD_DIR = path.join(__dirname, "client", "dist"); // * Vite default outp
 app.use(express.static(BUILD_DIR));
 
 // * SPA fallback: always return index.html
-app.get("*", (req, res) => {
+app.use((req, res) => {
   res.sendFile(path.join(BUILD_DIR, "index.html"));
 });
 
