@@ -3,7 +3,7 @@ const path = require("path");
 
 const app = express();
 const PORT = 8080; // * Match the Port field in seenode
-const BUILD_DIR = path.join(__dirname, "client", "dist"); // * Vite default output
+const BUILD_DIR = path.join(__dirname, "dist"); // * Vite default output
 
 // * Serve static assets from the build output
 app.use(express.static(BUILD_DIR));
